@@ -21,6 +21,7 @@ Computer::Computer(char* brand, char* processor, char* video, char* hardDrive, d
     this->batteryLife = batteryLife;
     this->price = price;
     this->quantity = quantity;
+    ++serialNumber;
 }
 
 Computer::~Computer() {
