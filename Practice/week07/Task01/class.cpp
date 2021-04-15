@@ -31,6 +31,18 @@ Computer::~Computer() {
     delete[] hardDrive;
 }
 
+//setters should be 
+//void Computer::setBrand(const char* brand) etc
+
+//also if u use as my helpers.hpp - they're static functions
+//therefore when u use them it's like this ->    
+// Helpers::strlen(neshto);
+
+// another point skobite sa na greshnoto mqsto
+// should be strlen(string) + 1 :DDD 
+
+// I thinks that's all for now uwu
+
 void Computer::setBrand() {
     char tmp[256];
     cout << "Brand: " << endl;
