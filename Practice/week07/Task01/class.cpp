@@ -12,6 +12,7 @@ Computer::Computer()
 }
 
 Computer::Computer(char* brand, char* processor, char* video, char* hardDrive, double weight, int batteryLife, double price, unsigned int quantity) { 
+    uniqueSerialNumber = serialNumber;
     this->brand = brand;
     this->processor = processor;
     this->video = video;
