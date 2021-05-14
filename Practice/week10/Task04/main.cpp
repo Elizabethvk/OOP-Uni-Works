@@ -30,7 +30,7 @@ int main()
         //     std::cout << str << 'a';
         // }
 
-        // file.close();
+        file.close();
 
         // file.open("Test.txt", std::ios::in);
 
