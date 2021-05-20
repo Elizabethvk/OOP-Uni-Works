@@ -100,18 +100,43 @@ public:
 
     void saveBinary(string fileName) {
         std::ofstream file;
-        file.open(fileName, std::ofstream::binary | std::ofstream::ate);
+        file.open(fileName, std::ofstream::binary | std::ofstream::ate | std::ofstream::out);
 
         if (file.is_open()) {
+            // for (int i = 0; i < size; ++i) {
+            //     file << *poletiN[i] << endl;
+            // }
             for (int i = 0; i < size; ++i) {
-                file << *poletiN[i] << endl;
+                file.write((char*)& poletiN[i], sizeof(poletiN[i]));
+                //file << '\n';
             }
-            
-            
+
         }
 
 
         file.close();
+    }
+
+
+    void readBinary(string fileName) {
+        std::ifstream file;
+        file.open(fileName, std::ifstream::binary | std::ifstream::in);
+
+        for (int i = 0; i < size; ++i) {
+            poletiN[i] = nullptr;
+        }
+        
+
+        if(file.is_open()) {
+            unsigned int i = 0;
+            while(!file.eof()) {
+                file.read((char*)& poletiN[i], sizeof(poletiN[i]) );
+                ++i;
+            }
+        }
+        
+        file.close();
+
     }
 
     void print() {
