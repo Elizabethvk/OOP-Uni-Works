@@ -14,7 +14,8 @@ public:
     Stock() = default;
     ~Stock();
     const std::vector<Furniture*>* getStockPtr() const;
-    void addFurniture(const unsigned int& furniture);
+    void addFurniture(const unsigned int& number);
+    void printById(const unsigned& id);
 };
 
 

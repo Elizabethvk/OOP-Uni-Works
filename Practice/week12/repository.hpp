@@ -5,12 +5,9 @@
 
 #include "stock.hpp"
 
-// class Stock;
-
 class Repository {
 private:
-    // std::оfstream file;
-    std::vector<Furniture*> allFurniture;
+    // std::vector<Furniture*> allFurniture;
 
     Repository()
     {
@@ -24,7 +21,7 @@ public:
     Repository(Repository&& otherRepo) = delete;
     Repository operator=(Repository& otherRepo) = delete;
 
-    void saveFile(const string& fileName, std::vector);
+    void saveFile(const string& fileName, const std::vector<Furniture*>& furniture);
 
 };
 

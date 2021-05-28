@@ -3,18 +3,19 @@
 
 #include "furniture.hpp"
 
-enum Type {
-    wooden = 0,
-    metal,
-    plastic
-};
+// enum Type {
+//     wooden = 0,
+//     metal,
+//     plastic
+// };
 
 
 class Chair : public Furniture {
 private:
-    Type type;
+    // Type type;
 public:
     Chair(double height, double width, double length, unsigned int quantity, double price, Type type);
+    Type getType() const;
     void print();
     void printForFile(std::ostream& out);
     
