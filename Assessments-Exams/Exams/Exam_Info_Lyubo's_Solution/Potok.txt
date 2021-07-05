@@ -1,0 +1,4 @@
+CPU 119.96
+memory 8999
+Total price: 9118.96
+
